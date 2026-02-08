@@ -1,5 +1,16 @@
+# HTTP 클라이언트 타임아웃 (Ollama 등 외부 호출용, 단위: 초)
+app:
+  http:
+    connect-timeout: 10
+    read-timeout: 30
+
 server:
   port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
 logging:
   level:
@@ -14,6 +25,8 @@ spring:
       chat:
         options:
           model: llama3.2
+          # 생성 토큰 상한 (낮을수록 응답 짧고 빠름, 테스트용임으로 적게해서 조회되는걸로 확인)
+          num-predict: 32
     mcp:
       server:
         protocol: STREAMABLE
