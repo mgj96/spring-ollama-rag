@@ -1,0 +1,38 @@
+# 빌드 산출물, IDE 설정, 로컬·민감 정보는 GitHub에 올리지 않음
+
+# Gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.code-workspace
+
+# 로컬·환경 설정 (민감 정보·환경별 오버라이드) — GitHub에 올리지 않음
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.properties
+*-local.yml
+*-local.properties
+gradle-local.properties
+**/secrets/
+*.pem
+*.key
+*.jks
+credentials.properties
+secret.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 로그 (선택)
+*.log
+logs/
