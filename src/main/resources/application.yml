@@ -3,7 +3,6 @@ app:
   http:
     connect-timeout: 10
     read-timeout: 30
-
 server:
   port: 8080
   servlet:
